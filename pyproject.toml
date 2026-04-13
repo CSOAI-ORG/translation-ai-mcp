@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "translation-ai-mcp"
+version = "1.0.0"
+description = "Language tools - text translation, language detection, grammar checking, tone adjustment, localization validation"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [
+    { name = "MEOK AI Labs", email = "hello@meok.ai" },
+]
+keywords = ["mcp", "ai", "tools", "translation"]
+dependencies = [
+    "mcp>=1.0.0",
+]
+
+[project.scripts]
+translation-ai-mcp = "server:mcp.run"
