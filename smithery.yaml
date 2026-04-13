@@ -1,0 +1,10 @@
+name: translation-ai-mcp
+description: "MEOK AI Labs — Language tools powered by MEOK AI Labs."
+vendor: MEOK AI Labs
+homepage: https://meok.ai
+repository: https://github.com/CSOAI-ORG/translation-ai-mcp
+license: MIT
+categories: [Language, NLP]
+tags: [translation, language-translation, i18n, localization, multilingual]
+runtime: python
+entrypoint: server.py
