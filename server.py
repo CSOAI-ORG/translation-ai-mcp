@@ -74,8 +74,7 @@ BASIC_DICT = {
 def translate_text(
     text: str,
     source_language: str = "auto",
-    target_language: str = "en",
-) -> dict:
+    target_language: str = "en") -> dict:
     """Translate text between languages using built-in dictionary and word mapping.
 
     Args:
@@ -192,8 +191,7 @@ def _detect_language_internal(text: str) -> dict:
 @mcp.tool()
 def detect_language(
     text: str,
-    detailed: bool = True,
-) -> dict:
+    detailed: bool = True) -> dict:
     """Detect the language of input text using script and word analysis.
 
     Args:
@@ -231,8 +229,7 @@ def detect_language(
 @mcp.tool()
 def check_grammar(
     text: str,
-    language: str = "en",
-) -> dict:
+    language: str = "en") -> dict:
     """Check text for common grammar and style issues.
 
     Args:
@@ -316,8 +313,7 @@ def check_grammar(
 @mcp.tool()
 def adjust_tone(
     text: str,
-    target_tone: str = "professional",
-) -> dict:
+    target_tone: str = "professional") -> dict:
     """Analyze text tone and provide recommendations for adjustment.
 
     Args:
@@ -422,8 +418,7 @@ def adjust_tone(
 @mcp.tool()
 def validate_localization(
     strings: list[dict],
-    target_locale: str = "en-US",
-) -> dict:
+    target_locale: str = "en-US") -> dict:
     """Validate localized strings for common internationalization issues.
 
     Args:
