@@ -1,10 +1,54 @@
 name: translation-ai-mcp
-description: "MEOK AI Labs — Language tools powered by MEOK AI Labs."
-vendor: MEOK AI Labs
-homepage: https://meok.ai
-repository: https://github.com/CSOAI-ORG/translation-ai-mcp
-license: MIT
-categories: [Language, NLP]
-tags: [translation, language-translation, i18n, localization, multilingual]
-runtime: python
-entrypoint: server.py
+description: '> Language tools - text translation, language detection, grammar checking,
+  tone adjustment, localization validation'
+version: 1.0.0
+tools:
+- name: translate_text
+  description: Translate text between languages using built-in dictionary and word
+    mapping.
+  parameters:
+  - name: text
+    type: string
+    required: true
+  - name: source_language
+    type: string
+    required: false
+  - name: target_language
+    type: string
+    required: false
+- name: detect_language
+  description: Detect the language of input text using script and word analysis.
+  parameters:
+  - name: text
+    type: string
+    required: true
+  - name: detailed
+    type: boolean
+    required: false
+- name: check_grammar
+  description: Check text for common grammar and style issues.
+  parameters:
+  - name: text
+    type: string
+    required: true
+  - name: language
+    type: string
+    required: false
+- name: adjust_tone
+  description: Analyze text tone and provide recommendations for adjustment.
+  parameters:
+  - name: text
+    type: string
+    required: true
+  - name: target_tone
+    type: string
+    required: false
+- name: validate_localization
+  description: Validate localized strings for common internationalization issues.
+  parameters:
+  - name: strings
+    type: array
+    required: true
+  - name: target_locale
+    type: string
+    required: false

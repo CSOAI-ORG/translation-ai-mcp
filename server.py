@@ -3,6 +3,11 @@ Translation AI MCP Server
 Language tools powered by MEOK AI Labs.
 """
 
+
+import sys, os
+sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
+from auth_middleware import check_access
+
 import time
 import re
 import unicodedata
@@ -74,7 +79,7 @@ BASIC_DICT = {
 def translate_text(
     text: str,
     source_language: str = "auto",
-    target_language: str = "en") -> dict:
+    target_language: str = "en", api_key: str = "") -> dict:
     """Translate text between languages using built-in dictionary and word mapping.
 
     Args:
@@ -82,6 +87,10 @@ def translate_text(
         source_language: Source language code (e.g. en, fr, de, es) or 'auto' for detection
         target_language: Target language code
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     _check_rate_limit("translate_text")
 
     if source_language == "auto":
@@ -191,13 +200,17 @@ def _detect_language_internal(text: str) -> dict:
 @mcp.tool()
 def detect_language(
     text: str,
-    detailed: bool = True) -> dict:
+    detailed: bool = True, api_key: str = "") -> dict:
     """Detect the language of input text using script and word analysis.
 
     Args:
         text: Text to analyze
         detailed: Include detailed breakdown
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     _check_rate_limit("detect_language")
 
     result = _detect_language_internal(text)
@@ -229,13 +242,17 @@ def detect_language(
 @mcp.tool()
 def check_grammar(
     text: str,
-    language: str = "en") -> dict:
+    language: str = "en", api_key: str = "") -> dict:
     """Check text for common grammar and style issues.
 
     Args:
         text: Text to check
         language: Language code (currently supports 'en' for English)
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     _check_rate_limit("check_grammar")
 
     issues = []
@@ -313,13 +330,17 @@ def check_grammar(
 @mcp.tool()
 def adjust_tone(
     text: str,
-    target_tone: str = "professional") -> dict:
+    target_tone: str = "professional", api_key: str = "") -> dict:
     """Analyze text tone and provide recommendations for adjustment.
 
     Args:
         text: Text to analyze
         target_tone: Desired tone: professional, casual, formal, friendly, academic, persuasive
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     _check_rate_limit("adjust_tone")
 
     words = text.lower().split()
@@ -418,13 +439,17 @@ def adjust_tone(
 @mcp.tool()
 def validate_localization(
     strings: list[dict],
-    target_locale: str = "en-US") -> dict:
+    target_locale: str = "en-US", api_key: str = "") -> dict:
     """Validate localized strings for common internationalization issues.
 
     Args:
         strings: List of dicts with keys: key, value, source_locale (optional)
         target_locale: Target locale code (e.g. en-US, fr-FR, de-DE, ja-JP)
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     _check_rate_limit("validate_localization")
 
     issues = []

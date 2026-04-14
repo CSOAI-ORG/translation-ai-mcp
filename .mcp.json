@@ -1,24 +1,103 @@
 {
   "name": "translation-ai-mcp",
-  "description": "MEOK AI Labs \u2014 Language tools powered by MEOK AI Labs.",
-  "vendor": "MEOK AI Labs",
-  "homepage": "https://meok.ai",
-  "repository": "https://github.com/CSOAI-ORG/translation-ai-mcp",
-  "runtime": "python",
-  "entrypoint": "server.py",
+  "description": "> Language tools - text translation, language detection, grammar checking, tone adjustment, localization validation",
+  "version": "1.0.0",
   "tools": [
-    "translate_text",
-    "detect_language",
-    "check_grammar",
-    "adjust_tone",
-    "validate_localization"
-  ],
-  "categories": [
-    "Language",
-    "NLP"
-  ],
-  "pricing": {
-    "free": "50 calls/day",
-    "pro": "$9/mo"
-  }
+    {
+      "name": "translate_text",
+      "description": "Translate text between languages using built-in dictionary and word mapping.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "source_language": {
+            "type": "string"
+          },
+          "target_language": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "text"
+        ]
+      }
+    },
+    {
+      "name": "detect_language",
+      "description": "Detect the language of input text using script and word analysis.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "detailed": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "text"
+        ]
+      }
+    },
+    {
+      "name": "check_grammar",
+      "description": "Check text for common grammar and style issues.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "language": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "text"
+        ]
+      }
+    },
+    {
+      "name": "adjust_tone",
+      "description": "Analyze text tone and provide recommendations for adjustment.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "target_tone": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "text"
+        ]
+      }
+    },
+    {
+      "name": "validate_localization",
+      "description": "Validate localized strings for common internationalization issues.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "strings": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "target_locale": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "strings"
+        ]
+      }
+    }
+  ]
 }
