@@ -1,6 +1,6 @@
 {
   "name": "translation-ai-mcp",
-  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 MEOK AI Labs MCP Server",
+  "description": "Translation Ai automation via MCP. Includes translate text, detect language, check grammar. By MEOK AI Labs.",
   "version": "1.0.0",
   "tools": [
     {

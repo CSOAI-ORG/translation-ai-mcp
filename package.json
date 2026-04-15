@@ -1,7 +1,7 @@
 {
   "name": "translation-ai-mcp",
   "version": "1.0.0",
-  "description": "MEOK AI Labs — translation MCP Server",
+  "description": "Translation Ai automation via MCP. Includes translate text, detect language, check grammar. By MEOK AI Labs.",
   "main": "server.py",
   "mcp": {
     "name": "translation",
@@ -9,10 +9,22 @@
     "homepage": "https://meok.ai",
     "repository": "https://github.com/CSOAI-ORG/translation-ai-mcp",
     "runtime": "python",
-    "tags": ["mcp", "mcp-server", "meok-ai-labs", "ai-tools"]
+    "tags": [
+      "mcp",
+      "mcp-server",
+      "meok-ai-labs",
+      "ai-tools"
+    ]
   },
-  "keywords": ["mcp", "mcp-server", "meok-ai-labs"],
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "meok-ai-labs"
+  ],
   "author": "MEOK AI Labs <nicholas@meok.ai>",
   "license": "MIT",
-  "repository": {"type": "git", "url": "https://github.com/CSOAI-ORG/translation-ai-mcp"}
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CSOAI-ORG/translation-ai-mcp"
+  }
 }
