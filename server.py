@@ -14,7 +14,7 @@ import unicodedata
 from collections import defaultdict, Counter
 from mcp.server.fastmcp import FastMCP
 
-mcp = FastMCP("translation-ai-mcp")
+mcp = FastMCP("translation-ai", instructions="MEOK AI Labs MCP Server")
 
 _call_counts: dict[str, list[float]] = defaultdict(list)
 FREE_TIER_LIMIT = 50

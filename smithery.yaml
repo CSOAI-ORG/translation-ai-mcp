@@ -1,6 +1,5 @@
 name: translation-ai-mcp
-description: '> Language tools - text translation, language detection, grammar checking,
-  tone adjustment, localization validation'
+description: MEOK AI Labs MCP Server
 version: 1.0.0
 tools:
 - name: translate_text
