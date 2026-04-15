@@ -1,0 +1,10 @@
+{
+  "name": "translation-ai-mcp",
+  "description": "MEOK AI Labs \u2014 translation-ai-mcp",
+  "vendor": "MEOK AI Labs",
+  "homepage": "https://meok.ai",
+  "repository": "https://github.com/CSOAI-ORG/translation-ai-mcp",
+  "license": "MIT",
+  "runtime": "python",
+  "entryPoint": "mcp-wrapper.py"
+}
