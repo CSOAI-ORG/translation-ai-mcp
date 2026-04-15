@@ -1,0 +1,57 @@
+{
+  "name": "translation-ai",
+  "description": "Translation Ai tools powered by MEOK AI Labs.",
+  "version": "1.0.0",
+  "protocol_version": "2025-11-25",
+  "publisher": {
+    "name": "MEOK AI Labs",
+    "url": "https://meok.ai",
+    "email": "nicholas@meok.ai"
+  },
+  "repository": "https://github.com/CSOAI-ORG/translation-ai-mcp",
+  "license": "MIT",
+  "transport": [
+    "stdio",
+    "streamable-http"
+  ],
+  "authentication": {
+    "type": "api-key",
+    "free_tier": true,
+    "free_limit": "15 calls/day"
+  },
+  "tools": [
+    {
+      "name": "translate_text",
+      "description": "Translate text between languages using built-in dictionary and word mapping."
+    },
+    {
+      "name": "detect_language",
+      "description": "Detect the language of input text using script and word analysis."
+    },
+    {
+      "name": "check_grammar",
+      "description": "Check text for common grammar and style issues."
+    },
+    {
+      "name": "adjust_tone",
+      "description": "Analyze text tone and provide recommendations for adjustment."
+    },
+    {
+      "name": "validate_localization",
+      "description": "Validate localized strings for common internationalization issues."
+    }
+  ],
+  "categories": [
+    "AI & Machine Learning",
+    "Natural Language Processing"
+  ],
+  "pricing": {
+    "free": {
+      "calls_per_day": 15
+    },
+    "pro": {
+      "price": "$29/month",
+      "url": "https://meok.ai/pricing"
+    }
+  }
+}
