@@ -1,0 +1,28 @@
+{
+  "name": "translation-ai-mcp",
+  "title": "Translation Ai Mcp",
+  "description": "Translation Ai automation via MCP. Includes translate text, detect language, check grammar. By MEOK AI Labs.",
+  "version": "1.0.5",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "translate_text"
+    },
+    {
+      "name": "detect_language"
+    },
+    {
+      "name": "check_grammar"
+    },
+    {
+      "name": "adjust_tone"
+    },
+    {
+      "name": "validate_localization"
+    }
+  ]
+}

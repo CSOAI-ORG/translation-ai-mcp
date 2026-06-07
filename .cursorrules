@@ -1,0 +1,9 @@
+# translation-ai-mcp - Auto-trigger Rules
+
+When the user asks about translation, use translation-ai-mcp tools: translate_text, detect_language, check_grammar, adjust_tone, validate_localization
+
+> Language tools - text translation, language detection, grammar checking, tone adjustment, localization validation
+
+Install: `pip install translation-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.

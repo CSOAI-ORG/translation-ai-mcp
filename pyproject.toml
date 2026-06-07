@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 [project]
 name = "translation-ai-mcp"
-version = "1.0.0"
+version = "1.0.5"
 description = "Translation Ai automation via MCP. Includes translate text, detect language, check grammar. By MEOK AI Labs."
 license = {file = "LICENSE"}
 requires-python = ">=3.10"
@@ -21,7 +21,7 @@ Homepage = "https://meok.ai"
 Repository = "https://github.com/CSOAI-ORG/translation-ai-mcp"
 [tool.hatch.build.targets.wheel]
 packages = ["."]
-only-include = ["server.py"]
+only-include = ["server.py", "auth_middleware.py"]
 
 [project.scripts]
 translation_ai_mcp = "server:main"

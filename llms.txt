@@ -1,0 +1,36 @@
+# translation-ai-mcp
+# > Language tools - text translation, language detection, grammar checking, tone adjustment, localization validation
+
+## Install
+```bash
+pip install translation-ai-mcp
+```
+
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
+
+## Tools
+
+### `translate_text`
+Translate text between languages using built-in dictionary and word mapping.
+
+### `detect_language`
+Detect the language of input text using script and word analysis.
+
+### `check_grammar`
+Check text for common grammar and style issues.
+
+### `adjust_tone`
+Analyze text tone and provide recommendations for adjustment.
+
+### `validate_localization`
+Validate localized strings for common internationalization issues.
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's 38 governance MCPs (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.
