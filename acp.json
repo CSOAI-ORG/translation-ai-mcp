@@ -1,0 +1,23 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "translation-ai-mcp",
+    "description": "Translation Ai automation via MCP. Includes translate text, detect language, check grammar. By MEOK",
+    "version": "1.0.5",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "translation-ai-mcp"
+      }
+    ],
+    "capabilities": [
+      "translate_text",
+      "detect_language",
+      "check_grammar",
+      "adjust_tone",
+      "validate_localization"
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "name": "translation-ai-mcp",
+  "description": "Translation Ai automation via MCP. Includes translate text, detect language, check grammar. By MEOK",
+  "url": "https://proofof.ai/scorecard/translation-ai-mcp.html",
+  "version": "1.0.5",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "translate_text",
+      "name": "Translate Text",
+      "description": "translate_text via translation-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "detect_language",
+      "name": "Detect Language",
+      "description": "detect_language via translation-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "check_grammar",
+      "name": "Check Grammar",
+      "description": "check_grammar via translation-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "adjust_tone",
+      "name": "Adjust Tone",
+      "description": "adjust_tone via translation-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "validate_localization",
+      "name": "Validate Localization",
+      "description": "validate_localization via translation-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}
