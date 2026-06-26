@@ -1,4 +1,6 @@
 """
+Buy Pro: https://www.csoai.org/checkout
+
 Translation AI MCP Server
 Language tools powered by MEOK AI Labs.
 """
